@@ -7,6 +7,8 @@ import Review from "../views/Review.vue";
 import MonthChart from "../components/graph/MonthChart.vue";
 import DayChart from "../components/graph/DayChart.vue";
 import New from "../views/New.vue";
+import Signup from '@/views/auth/Signup';
+import Detailed from '@/components/Detailed';
 
 Vue.use(VueRouter);
 
@@ -23,13 +25,18 @@ const routes = [{
     // },
     {
         path: "/login",
-        name: "login",
+        name: "Login",
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () =>
             import ( /* webpackChunkName: "about" */ "../views/auth/Login.vue")
     },
+    {
+        path: '/signup',
+        name: 'Signup',
+        component: Signup
+      },
     {
         path: "/graph",
         name: "graph",
@@ -52,6 +59,11 @@ const routes = [{
         name: "recommend",
         component: Recommend
     },
+    {
+        path: '/detailed',
+        name: 'Detailed',
+        component: Detailed
+      },
     {
         path: "/review",
         name: "review",
