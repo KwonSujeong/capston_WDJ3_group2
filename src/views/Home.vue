@@ -11,7 +11,7 @@ import HomeJumbotron from '@/components/home/HomeJumbotron'
 import HomeContext   from '@/components/home/HomeContext'
 import HomeIntroduce from '@/components/home/HomeIntroduce'
 
-	export default {
+export default {
 		name: 'home',
 		components: {
 			HomeJumbotron,

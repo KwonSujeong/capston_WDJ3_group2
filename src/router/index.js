@@ -1,14 +1,15 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-import Graph from "../views/Graph.vue";
-import Recommend from "../views/Recommend.vue";
-import Review from "../views/Review.vue";
+import Home from "@/views/Home.vue";
+import Signup from '@/views/auth/Signup.vue';
+import Graph from "../views/graphView/Graph.vue";
 import MonthChart from "../components/graph/MonthChart.vue";
 import DayChart from "../components/graph/DayChart.vue";
-import New from "../views/New.vue";
-import Signup from '@/views/auth/Signup';
+import New from "../views/graphView/New.vue";
+import Recommend from "../views/recommendView/Recommend.vue";
 import Detailed from '@/components/Detailed';
+import Review from "../views/reviewView/ReviewMain.vue";
+import Store from "../components/review/Store.vue";
 
 Vue.use(VueRouter);
 
@@ -36,7 +37,7 @@ const routes = [{
         path: '/signup',
         name: 'Signup',
         component: Signup
-      },
+    },
     {
         path: "/graph",
         name: "graph",
@@ -63,11 +64,16 @@ const routes = [{
         path: '/detailed',
         name: 'Detailed',
         component: Detailed
-      },
+    },
     {
         path: "/review",
         name: "review",
-        component: Review
+        component: Review,
+    },
+    {
+        path: "/store/:id",
+        name: "store",
+        component: Store
     },
     {
         path: "/new",

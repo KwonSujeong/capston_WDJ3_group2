@@ -18,7 +18,7 @@
                 <div class="title white--text mt-4">
                   <h5 class=" white--text font-weight-light">내 몸에 딱 맞는 식단으로 건강하게</h5>
                 </div>
-                <v-btn color="white" router :to="{name : 'survey'}" round
+                <v-btn color="white" rounded
                  class="title green--text font-weight-bold mt-4 pl-5 pr-5 pa-4">
                  Start
                 </v-btn>
