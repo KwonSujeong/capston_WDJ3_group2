@@ -3,14 +3,15 @@
         <v-layout>
             <v-flex>
                 <v-layout justify-center>
-                    <label class="label_bottom">RECOMMEND</label>
+                    <label class="green--text" >RECOMMEND</label>
                 </v-layout>
 
                 <v-layout> 
                     <v-flex>
-                        <v-card class="my_img">
-                            <v-img height="300px" src="/static/a.jpg" @click="img_click()"></v-img>
-
+                        <v-card style="margin-top: 150px; height: 400px; width:500px;">
+                            <router-link to="/Detailed">
+                                <v-img height="300px" src="/static/a.jpg"></v-img>
+                            </router-link>
                             <v-card-text class="img_name">
                                 <div>냠녕띠낀</div>
                             </v-card-text>
@@ -18,7 +19,7 @@
                     </v-flex>
 
                     <v-flex>
-                        <v-card class="my_img">
+                        <v-card style="margin-top: 150px; height: 400px; width:500px;">
                             <v-img height="300px" src="/static/b.jpg"></v-img>
 
                             <v-card-text class="img_name">
@@ -30,7 +31,7 @@
 
                 <v-layout>
                     <v-flex>
-                        <v-card class="my_img">
+                        <v-card style="margin-top: 150px; height: 400px; width:500px;">
                             <v-img height="300px" src="/static/c.jpg"></v-img>
 
                             <v-card-text class="img_name">
@@ -40,7 +41,7 @@
                     </v-flex>
 
                     <v-flex>
-                        <v-card class="my_img">
+                        <v-card style="margin-top: 150px; height: 400px; width:500px;">
                             <v-img height="300px" src="/static/d.jpg"></v-img>
 
                             <v-card-text>
@@ -52,7 +53,7 @@
 
                 <v-layout>
                     <v-flex>
-                        <v-card class="my_img">
+                        <v-card style="margin-top: 150px; height: 400px; width:500px;">
                             <v-img height="300px" src="/static/e.jpg"></v-img>
 
                             <v-card-text class="img_name">
@@ -62,7 +63,7 @@
                     </v-flex>
 
                     <v-flex>
-                        <v-card class="my_img">
+                        <v-card style="margin-top: 150px; height: 400px; width:500px;">
                             <v-img height="300px" src="/static/f.jpg"></v-img>
 
                             <v-card-text>
@@ -85,26 +86,15 @@ export default {
             
         }     
     },
-    methods: {
-        img_click:function(){
-           window.open("http://localhost:8080/Detailed");
-        }
-    }
+    // methods: {
+    //     img_click:function(){
+    //        window.open("http://localhost:8080/Detailed");
+    //     }
+    // }
 }
 </script>
 
 <style scoped>
-label{
-    color: #2F9D27;
-    font-size: 50px;
-}
-.my_img{
-    width:500px;
-    height: 400px;
-}
 
-.my_img{
-    margin-top: 150px;
-}
 
 </style>
