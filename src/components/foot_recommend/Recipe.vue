@@ -14,10 +14,20 @@
                         <div style="width:500px; height: 400px;">
                                 <div class="display-1 font-weight-bold">{{food.foot_name}}</div>
                                 <br>
-                                <h2 class="green--text font-weight-bold">재료</h2>
-                                <div class="d-flex flex-wrap">
-                                    <h3 style="margin-right:30px;" v-for="material in materials" v-bind:key="material.index">
-                                        {{material}}
+                        <h2 class="font-weight-bold">영양소</h2>
+                        <div style="margin-right:50px;">
+                            중량(1인분):{{food.foot_weight}}
+                            열량:{{food.foot_calorimetry}}
+                            탄수화물:{{food.foot_Carbohydrate}}
+                            단백질:{{food.foot_protein}}
+                            지방:{{food.foot_local}}
+                            나트륨:{{food.foot_natrium}}
+                        </div>
+                        <br>
+                        <h2 class="green--text font-weight-bold">재료</h2>
+                        <div class="d-flex flex-wrap">
+                            <h3 style="margin-right:30px;" v-for="material in materials" v-bind:key="material.index">
+                                {{material}}
                                     </h3>                           
                                 </div>
                         </div>
@@ -28,7 +38,9 @@
                     
                     <v-flex class="text-md-center" xs12 sm12 md12>
                         <div class="display-1 font-weight-bold" style="margin-top:100px; text-align:center;">만드는 방법</div>
-                        <v-img style="  margin-top: 25px;"  :src="food.foot_recipe"></v-img>
+                        <div v-for="recipe in recipes" v-bind:key="recipe.index">
+                            <v-img style="margin-top: 25px;" :src="recipe"></v-img>
+                        </div>
                     </v-flex>
                     
                 </div>
@@ -46,6 +58,7 @@ export default {
         return{
             food:'',
             materials:'',
+            recipes:'',
         };
     },
 
@@ -54,7 +67,8 @@ export default {
         .then((response) => {
             this.food=response.data.footrecommend.filter(data=>data.foot_id == this.$route.params.id)[0];
             this.materials=this.food.foot_material;
-            console.log(this.materials);
+            this.recipes=this.food.foot_recipe;
+            console.log(this.recipes);
         })
         .catch((err) => {
             console.log(err);
