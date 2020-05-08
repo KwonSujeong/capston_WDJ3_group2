@@ -50,7 +50,7 @@ export default {
       drawer : false,
       items: [
         { title: 'Graph', icon: 'mdi-view-dashboard', route: '/graph/monthchart'},
-        { title: 'Recommend', icon: 'mdi-image', route:'/recommend'},
+        { title: 'Recommend', icon: 'mdi-image', route:'/recommendmain/recommend'},
         { title: 'Review', icon: 'mdi-help-box', route:'/review'},
       ],
       right: null,

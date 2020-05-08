@@ -127,6 +127,7 @@ export default {
          .then((res)=>{
             this.product=res.data.products.filter(data=> data.id == this.$route.params.id)[0];
             this.product.image='/'+this.product.image;
+            console.log(res);
          })
          .catch((err)=>{
             console.log(err);
