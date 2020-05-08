@@ -7,15 +7,14 @@ import Graph from "../views/graphView/Graph.vue";
 import MonthChart from "../components/graph/MonthChart.vue";
 import DayChart from "../components/graph/DayChart.vue";
 import New from "../views/graphView/New.vue";
-import Recommend from "../views/recommendView/Recommend.vue";
+import Recommend from "../components/Recommend/Recommend.vue";
 import ReviewMain from "../views/reviewView/ReviewMain.vue";
 import Store from "../components/review/Store.vue";
 import StoreReview from "../components/review/StoreReview.vue";
-import Detailed from '@/views/Recommend/Detailed';
-import Noticeboard from '@/views/review_board/Noticeboard';
-import ReviewBoard from '@/views/review_board/ReviewBoard';
-import Recipe from '@/views/foot_recommend/Recipe';
-import FootRecommend from '@/views/foot_recommend/FootRecommend';
+import Detailed from '@/components/Recommend/Detailed';
+import Recipe from '@/components/foot_recommend/Recipe';
+import FootRecommend from '@/components/foot_recommend/FootRecommend';
+import RecommendMain from '@/views/RecommendMain.vue'
 
 Vue.use(VueRouter);
 
@@ -46,16 +45,6 @@ const routes = [{
 
     },
     {
-        path: "/noticeboard",
-        name: "noticeboard",
-        component: Noticeboard
-    },
-    {
-        path: "/reviewboard",
-        name: "reviewboard",
-        component: ReviewBoard
-    },
-    {
         path: "/graph",
         name: "graph",
         component: Graph,
@@ -73,12 +62,24 @@ const routes = [{
 
     },
     {
-        path: "/recommend",
-        name: "recommend",
-        component: Recommend
+        path: "/recommendmain",
+        name: "RecommendMain",
+        component: RecommendMain,
+        children: [{
+                path: "recommend",
+                name: "Recommend",
+                component: Recommend
+            },
+            {
+                path: "footrecommend",
+                name: "FootRecommend",
+                component: FootRecommend
+            }
+        ],
+
     },
     {
-        path: '/detailed',
+        path: '/detailed/:id',
         name: 'Detailed',
         component: Detailed
     },
@@ -105,14 +106,9 @@ const routes = [{
         component: New
     },
     {
-        path: '/recipe',
+        path: '/recipe/:id',
         name: 'Recipe',
         component: Recipe
-    },
-    {
-        path: "/footrecommend",
-        name: "FootRecommend",
-        component: FootRecommend
     },
 ];
 

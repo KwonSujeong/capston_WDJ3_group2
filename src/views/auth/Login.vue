@@ -9,7 +9,7 @@
                         <v-img src="/static/fogg-welcome-2.png" class="ma-5 pa-4"></v-img>
                     </v-flex>
                 </v-layout>
-                <span class="text-xs-left text-md-left ">
+                <span class="text-xs-left text-md-left">
                 <v-layout row wrap>
                     <v-flex xs12 sm12 md12>
                         <v-form v-model="valid">
