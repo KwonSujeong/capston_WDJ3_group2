@@ -43,7 +43,7 @@
                                     <!-- <p class="desc">어쩌구저쩌구</p> -->
                                     <div class="location">
                                         <!-- <v-icon>location_on</v-icon>    -->
-                                         <v-btn color="green" class="white--text" rounded :to="{ name: 'store' , params : {id: product.id}}">review</v-btn>
+                                         <v-btn color="green" class="white--text" rounded :to="{ name: 'storereview' , params : {id: product.id}}">review</v-btn>
                                     </div>
                                 </div>
                             </v-layout>

@@ -8,8 +8,9 @@ import MonthChart from "../components/graph/MonthChart.vue";
 import DayChart from "../components/graph/DayChart.vue";
 import New from "../views/graphView/New.vue";
 import Recommend from "../views/recommendView/Recommend.vue";
-import Review from "../views/reviewView/ReviewMain.vue";
+import ReviewMain from "../views/reviewView/ReviewMain.vue";
 import Store from "../components/review/Store.vue";
+import StoreReview from "../components/review/StoreReview.vue";
 import Detailed from '@/views/Recommend/Detailed';
 import Noticeboard from '@/views/review_board/Noticeboard';
 import ReviewBoard from '@/views/review_board/ReviewBoard';
@@ -31,7 +32,7 @@ const routes = [{
     // },
     {
         path: "/login",
-        name: "Login",
+        name: "login",
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
@@ -40,7 +41,7 @@ const routes = [{
     },
     {
         path: '/signup',
-        name: 'Signup',
+        name: 'signup',
         component: Signup
 
     },
@@ -84,12 +85,19 @@ const routes = [{
     {
         path: "/review",
         name: "review",
-        component: Review,
+        component: ReviewMain,
     },
     {
         path: "/store/:id",
         name: "store",
-        component: Store
+        component: Store,
+        props: true,
+        children: [{
+            path: 'storereview',
+            name: 'storereview',
+            component: StoreReview,
+            props: true
+        }]
     },
     {
         path: "/new",

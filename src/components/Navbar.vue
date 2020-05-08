@@ -49,7 +49,7 @@ export default {
     return {
       drawer : false,
       items: [
-        { title: 'Graph', icon: 'mdi-view-dashboard', route: '/graph/monthchart'},
+        { title: 'Graph', icon: 'mdi-view-dashboard', route: '/graph/daychart'},
         { title: 'Recommend', icon: 'mdi-image', route:'/recommend'},
         { title: 'Review', icon: 'mdi-help-box', route:'/review'},
       ],

@@ -129,7 +129,7 @@
           <div class="mt-4 title message" style="margin-bottom:15px;">
              건강한 식사 시작하시겠습니까?
           </div>
-          <v-btn color="green" class="white--text" rounded large router :to="{name: 'join'}">START</v-btn>
+          <v-btn color="green" class="white--text" rounded large router :to="{name: 'signup'}">START</v-btn>
         </div>
       </v-flex>
     </v-layout>

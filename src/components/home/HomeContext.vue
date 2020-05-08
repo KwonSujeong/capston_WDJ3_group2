@@ -39,9 +39,9 @@
       </v-flex>
       <v-flex xs12 lg4 style="margin-bottom:20px;" v-for="card in service" :key="card.title">
         <v-card flat class="xs12 sm8 md8 lg4 ma-8">
-          <v-reponsive class="pt-4">
+          <v-flex>
             <v-img :src="card.img"></v-img>
-          </v-reponsive>
+          </v-flex>
           <v-card-title>
              <div class="subheading font-weight-bold green--text">{{ card.title }}</div>
           </v-card-title>

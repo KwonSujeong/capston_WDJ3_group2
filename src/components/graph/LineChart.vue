@@ -1,5 +1,7 @@
 <template>
-  <canvas ref="myChart" :width="width" :height="height"></canvas>
+  <v-card>
+    <canvas ref="myChart" :width="width" :height="height"></canvas>
+  </v-card>
 </template>
 
 <script>
