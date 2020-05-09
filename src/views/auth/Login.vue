@@ -82,7 +82,7 @@ export default {
 
     methods: {
         signupPage(){
-            this.$router.push({name: 'Signup'})
+            this.$router.push({name: 'signup'})
             this.$store.state.isLoginDialog=false
         },
     }

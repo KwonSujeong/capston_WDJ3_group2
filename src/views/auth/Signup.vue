@@ -106,7 +106,7 @@
 <script>
 
 export default {   
-    name: 'Signup',
+    name: 'signup',
     data(){
         return{
             email:'', //이메일
